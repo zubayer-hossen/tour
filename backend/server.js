@@ -7,13 +7,11 @@ const userRouter = require('./routes/userRoutes');
 const path = require('path');
 
 
+// Allow specific origin (frontend URL)
 const corsOptions = {
-  origin: 'https://special-economics-care-tour-register.onrender.com',  // Allow only this frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow only specific methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-  credentials: true, // Allow cookies and credentials to be included in requests
-  preflightContinue: false,  // Let Express handle preflight requests automatically
-  optionsSuccessStatus: 204  // Status code for successful OPTIONS requests
+  origin: "https://special-economics-care-tour-register.onrender.com",  // Frontend URL in production
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
 };
 
 
@@ -40,7 +38,7 @@ app.use('/api/users', userRouter);
 app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
 
 // Port
-const PORT = 'https://tour-user.onrender.com' || 5000;
+const PORT = process.env.PORT || 5000;  // Use process.env.PORT for production or fallback to 5000 for local
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
