@@ -102,7 +102,7 @@ router.post('/register', async (req, res) => {
       
       <!-- Header -->
       <div style="background: linear-gradient(135deg, #007bff, #0056b3); color: white; text-align: center; padding: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-        <h2 style="margin: 0; font-size: 22px;">🎟 Special Economic Care Coaching Centre</h2>
+        <h2 style="margin: 0; font-size: 22px;">🎟 Special Economics Care Coaching Centre</h2>
         <p style="margin: 5px 0; font-size: 16px;">New Registration Notification</p>
       </div>
 
@@ -136,7 +136,7 @@ router.post('/register', async (req, res) => {
 
         <!-- Ticket Download Button -->
         <p style="margin-top: 20px; text-align: center;">
-          <a href="${process.env.BASE_URL_BACKEND}/pdfs/registration-${newUser._id}.pdf" 
+          <a href="${process.env.PORT}/pdfs/registration-${newUser._id}.pdf" 
              style="background-color: #007bff; color: white; padding: 12px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: background 0.3s;">
             📥 Download Registration Ticket
           </a>
@@ -226,7 +226,7 @@ router.post('/register', async (req, res) => {
 
   <!-- Ticket Download Button -->
   <div style="text-align: center; margin-top: 20px;">
-    <a href="${ process.env.BASE_URL_BACKEND}/pdfs/registration-${newUser._id}.pdf"
+    <a href="${ process.env.PORT}/pdfs/registration-${newUser._id}.pdf"
        style="background: linear-gradient(135deg, #ff758c, #ff7eb3); color: white; padding: 14px 24px; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
       📥 Download Your Registration Ticket
     </a>
