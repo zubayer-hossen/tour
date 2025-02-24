@@ -1,0 +1,183 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    /* Cool Blue-Purple Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container for Register Box */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Glassy Register Box */
+.register-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 35px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for depth */
+.register-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading Style */
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Input and Select Styling */
+input,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #1bf107;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Placeholder and Text Color */
+input::placeholder,
+select {
+    color: #e0e0e0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid #ffffff;
+    color: #8ff315;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+
+/* Success and Error Messages */
+.success {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* PDF Download Button */
+button+button {
+    background-color: #3498db;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+button+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .register-box {
+        padding: 25px;
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-box {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        padding: 15px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    button+button {
+        margin-top: 10px;
+    }
+}
