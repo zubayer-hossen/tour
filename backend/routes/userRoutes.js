@@ -136,7 +136,7 @@ router.post('/register', async (req, res) => {
 
         <!-- Ticket Download Button -->
         <p style="margin-top: 20px; text-align: center;">
-          <a href="${process.env.PORT}/pdfs/registration-${newUser._id}.pdf" 
+          <a href="https://tour-user.onrender.com/pdfs/registration-${newUser._id}.pdf"
              style="background-color: #007bff; color: white; padding: 12px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: background 0.3s;">
             📥 Download Registration Ticket
           </a>
@@ -226,7 +226,7 @@ router.post('/register', async (req, res) => {
 
   <!-- Ticket Download Button -->
   <div style="text-align: center; margin-top: 20px;">
-    <a href="${ process.env.PORT}/pdfs/registration-${newUser._id}.pdf"
+    <a href="https://tour-user.onrender.com/pdfs/registration-${newUser._id}.pdf"
        style="background: linear-gradient(135deg, #ff758c, #ff7eb3); color: white; padding: 14px 24px; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);">
       📥 Download Your Registration Ticket
     </a>
